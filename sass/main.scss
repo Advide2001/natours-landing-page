@@ -80,6 +80,8 @@ $clr-primary-900-80: hsla(160, 64%, 43%, 0.8);
 $clr-primary-500: hsl(140, 49%, 55%);
 $clr-primary-100: hsl(111, 55%, 64%);
 $clr-primary-100-80: hsla(111, 55%, 64%, 0.8);
+
+$clr-neutral-900: hsl(0, 0%, 0%);
 $clr-neutral-300: hsl(0, 0%, 47%);
 $clr-neutral-100: hsl(0, 0%, 100%);
 
@@ -116,30 +118,29 @@ body {
     position: relative;
     /* To cut the image */
     clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
-}
 
-.header__logo-box {
-    /* 
+    &__logo-box {
+        /* 
         origin coordinate is at the top-left corner of the parent element,
         if the parent element has a position of reletive 
-     */
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
-}
+        */
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+    &__logo {
+        height: 2.25rem;
+    }
 
-.header__logo {
-    height: 2.25rem;
-}
-
-.header__text-box {
-    /* To position the heading in the center of the page */
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* To center the content of the box */
-    text-align: center;
+    &__text-box {
+        /* To position the heading in the center of the page */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* To center the content of the box */
+        text-align: center;
+    }
 }
 
 .heading-primary {
@@ -148,25 +149,79 @@ body {
     /* To fix the slight up jerk caused during animation */
     backface-visibility: hidden;
     margin-bottom: 3.75rem;
+
+    &--main {
+        display: block;
+        letter-spacing: 2.25rem;
+        font-size: 3.75rem;
+        font-weight: $fw-regular-400;
+        /* Animation to slide in the element when refreshed  */
+        animation: moveInLeft 1s ease-out;
+    }
+
+    &--sub {
+        display: block;
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+        font-weight: $fw-bold-700;
+        /* Animation to slide in the element when refreshed  */
+        animation: moveInRight 1s ease-out;
+    }
 }
 
-.heading-primary--main {
-    display: block;
-    letter-spacing: 2.25rem;
-    font-size: 3.75rem;
-    font-weight: $fw-regular-400;
-    /* Animation to slide in the element when refreshed  */
-    animation: moveInLeft 1s ease-out;
-}
-.heading-primary--sub {
-    display: block;
-    letter-spacing: 1rem;
-    font-size: 1.5rem;
-    font-weight: $fw-bold-700;
-    /* Animation to slide in the element when refreshed  */
-    animation: moveInRight 1s ease-out;
+/* Animation to move the heading */
+@keyframes moveInLeft {
+    /* Initial state */
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX(10px);
+    }
+
+    /* Final state */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
+/* Styling buttons */
+/* :link, :visited are pseudo classes */
+
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2.5rem;
+        /* Any high number for border-rafius will give the cute curve effect */
+        border-radius: 10rem;
+        /* Transition to make the control the translate */
+        transition: all 0.2;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0.75rem 1.25rem hsla(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2);
+    }
+
+    &-white {
+        background-color: $clr-neutral-100;
+        color: $clr-neutral-300;
+    }
+}
+
+//  ANIMATION SECTION
 /* Animation to move the heading */
 @keyframes moveInLeft {
     /* Initial state */
@@ -204,33 +259,4 @@ body {
         opacity: 1;
         transform: translate(0);
     }
-}
-
-/* Styling buttons */
-/* :link, :visited are pseudo classes */
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 2.5rem;
-    /* Any high number for border-rafius will give the cute curve effect */
-    border-radius: 10rem;
-    /* Transition to make the control the translate */
-    transition: all 0.2;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-    background-color: $clr-neutral-100;
-    color: $clr-neutral-300;
 }
