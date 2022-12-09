@@ -1,3 +1,6 @@
+/* Variables for colors */
+/* Variables for fonts */
+/* Variables for font weights */
 /* CSS Reset */
 /* Box sizing rules */
 *,
@@ -62,6 +65,14 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #787878;
+  line-height: 1.7;
+  padding: 1.875rem; }
+
 /* Animation to move the heading */
 @keyframes moveInLeft {
   /* Initial state */
@@ -90,9 +101,6 @@ select {
     opacity: 1;
     transform: translate(0); } }
 
-/* Variables for colors */
-/* Variables for fonts */
-/* Variables for font weights */
 /* Styling buttons */
 /* :link, :visited are pseudo classes */
 .btn:link, .btn:visited {
@@ -116,14 +124,6 @@ select {
 .btn-white {
   background-color: white;
   color: #787878; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #787878;
-  line-height: 1.7;
-  padding: 1.875rem; }
 
 .header {
   height: 95vh;

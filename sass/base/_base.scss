@@ -73,3 +73,13 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+// Default configuration for the web page
+body {
+    font-family: $ff-regular;
+    font-size: 1rem;
+    font-weight: $fw-regular-400;
+    color: $clr-neutral-300;
+    line-height: 1.7;
+    padding: 1.875rem;
+}
