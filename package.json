@@ -1,0 +1,28 @@
+{
+    "name": "natours",
+    "version": "1.0.0",
+    "description": "Landing page for natours",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass sass/main.scss css/main.css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Advide2001/advanced-css-course.git#master"
+    },
+    "keywords": [
+        "HTML",
+        "CSS",
+        "SCSS",
+        "SASS"
+    ],
+    "author": "Adarsh V. Desai",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Advide2001/advanced-css-course/issues"
+    },
+    "homepage": "https://github.com/Advide2001/advanced-css-course/tree/master#readme",
+    "devDependencies": {
+        "node-sass": "^8.0.0"
+    }
+}
