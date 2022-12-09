@@ -101,6 +101,27 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  /* To fix the slight up jerk caused during animation */
+  backface-visibility: hidden;
+  margin-bottom: 3.75rem; }
+  .heading-primary--main {
+    display: block;
+    letter-spacing: 2.25rem;
+    font-size: 3.75rem;
+    font-weight: 400;
+    /* Animation to slide in the element when refreshed  */
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Animation to slide in the element when refreshed  */
+    animation: moveInRight 1s ease-out; }
+
 /* Styling buttons */
 /* :link, :visited are pseudo classes */
 .btn:link, .btn:visited {
@@ -152,24 +173,3 @@ body {
     transform: translate(-50%, -50%);
     /* To center the content of the box */
     text-align: center; }
-
-.heading-primary {
-  color: white;
-  text-transform: uppercase;
-  /* To fix the slight up jerk caused during animation */
-  backface-visibility: hidden;
-  margin-bottom: 3.75rem; }
-  .heading-primary--main {
-    display: block;
-    letter-spacing: 2.25rem;
-    font-size: 3.75rem;
-    font-weight: 400;
-    /* Animation to slide in the element when refreshed  */
-    animation: moveInLeft 1s ease-out; }
-  .heading-primary--sub {
-    display: block;
-    letter-spacing: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    /* Animation to slide in the element when refreshed  */
-    animation: moveInRight 1s ease-out; }

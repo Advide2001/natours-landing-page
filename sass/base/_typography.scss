@@ -1,0 +1,25 @@
+.heading-primary {
+    color: $clr-neutral-100;
+    text-transform: uppercase;
+    /* To fix the slight up jerk caused during animation */
+    backface-visibility: hidden;
+    margin-bottom: 3.75rem;
+
+    &--main {
+        display: block;
+        letter-spacing: 2.25rem;
+        font-size: 3.75rem;
+        font-weight: $fw-regular-400;
+        /* Animation to slide in the element when refreshed  */
+        animation: moveInLeft 1s ease-out;
+    }
+
+    &--sub {
+        display: block;
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+        font-weight: $fw-bold-700;
+        /* Animation to slide in the element when refreshed  */
+        animation: moveInRight 1s ease-out;
+    }
+}
