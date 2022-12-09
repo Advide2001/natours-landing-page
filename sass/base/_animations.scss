@@ -1,0 +1,38 @@
+/* Animation to move the heading */
+@keyframes moveInLeft {
+    /* Initial state */
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX(10px);
+    }
+
+    /* Final state */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/* Animation to move the heading */
+@keyframes moveInRight {
+    /* Initial state */
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX(-10px);
+    }
+
+    /* Final state */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
