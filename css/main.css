@@ -93,6 +93,30 @@ select {
 /* Variables for colors */
 /* Variables for fonts */
 /* Variables for font weights */
+/* Styling buttons */
+/* :link, :visited are pseudo classes */
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  /* Any high number for border-rafius will give the cute curve effect */
+  border-radius: 10rem;
+  /* Transition to make the control the translate */
+  transition: all 0.2; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); }
+
+.btn-white {
+  background-color: white;
+  color: #787878; }
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
@@ -149,27 +173,3 @@ body {
     font-weight: 700;
     /* Animation to slide in the element when refreshed  */
     animation: moveInRight 1s ease-out; }
-
-/* Styling buttons */
-/* :link, :visited are pseudo classes */
-.btn:link, .btn:visited {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  /* Any high number for border-rafius will give the cute curve effect */
-  border-radius: 10rem;
-  /* Transition to make the control the translate */
-  transition: all 0.2; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); }
-
-.btn-white {
-  background-color: white;
-  color: #787878; }
