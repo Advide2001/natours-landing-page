@@ -205,6 +205,34 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(1px); }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s; }
+    .composition__photo:not(:hover) {
+      transform: scale(0.95); }
+    .composition__photo--p1 {
+      top: -2rem;
+      left: 0rem; }
+    .composition__photo--p2 {
+      top: 2rem;
+      right: 0rem; }
+    .composition__photo--p3 {
+      top: 10rem;
+      left: 20%; }
+    .composition__photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      outline: 1rem solid #27b485;
+      outline-offset: 1rem; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
 .header {
   height: 95vh;
   /* Overlay color on the background image */
