@@ -3,3 +3,20 @@
     padding: 15rem 0;
     margin-top: -20vh;
 }
+
+.section-features {
+    /* Overlay color on the background image */
+    background-image: linear-gradient(
+            to right bottom,
+            $clr-primary-100-80,
+            $clr-primary-900-80
+        ),
+        url(../img/nat-4.jpg);
+    background-size: cover;
+    margin: -5rem;
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
