@@ -23,3 +23,40 @@
         animation: moveInRight 1s ease-out;
     }
 }
+
+.heading-secondary {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: $fw-bold-700;
+    display: inline-block;
+    background-image: linear-gradient(
+        to right,
+        $clr-primary-100,
+        $clr-primary-900
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; // When the color is transperant the background image (formed of linear gradient) is visible
+    letter-spacing: 2px;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba($clr-neutral-900, 0.2);
+    }
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: $fw-bold-700;
+}
+
+.paragraph {
+    font-size: 1rem;
+    font-weight: $fw-regular-400;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}

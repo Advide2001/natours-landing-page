@@ -101,6 +101,15 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 5rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.25rem; }
+
 .heading-primary {
   color: white;
   text-transform: uppercase;
@@ -121,6 +130,37 @@ body {
     font-weight: 700;
     /* Animation to slide in the element when refreshed  */
     animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #80d671, #27b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700; }
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
+  margin-top: -20vh; }
 
 /* Styling buttons */
 /* :link, :visited are pseudo classes */
@@ -145,6 +185,25 @@ body {
 .btn-white {
   background-color: white;
   color: #787878; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1rem;
+  color: #27b485;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #27b485;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(1px); }
 
 .header {
   height: 95vh;
@@ -176,7 +235,6 @@ body {
 
 .row {
   width: 71.25rem;
-  background-color: goldenrod;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 2rem; }
@@ -185,7 +243,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: #80d671;
     padding: 1rem;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
