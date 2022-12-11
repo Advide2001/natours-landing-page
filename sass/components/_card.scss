@@ -1,0 +1,183 @@
+.card {
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    height: 31.25rem;
+    position: relative;
+
+    &__side {
+        transition: all 0.8s ease;
+        position: absolute;
+        height: 31.25rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1rem 2.5rem rgba($clr-neutral-900, 0.15);
+
+        &--front {
+            background-color: $clr-neutral-100;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(
+                        to right bottom,
+                        $clr-secondary-100,
+                        $clr-secondary-900
+                    ),
+                    url(../img/nat-1-large.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &-2 {
+                background-image: linear-gradient(
+                        to right bottom,
+                        $clr-primary-100,
+                        $clr-primary-900
+                    ),
+                    url(../img/nat-1-large.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &-3 {
+                background-image: linear-gradient(
+                        to right bottom,
+                        $clr-tertiary-100,
+                        $clr-tertiary-900
+                    ),
+                    url(../img/nat-1-large.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    // Front side Styling
+    &__picture {
+        background-size: cover;
+        height: 14.375rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1 {
+            background-image: linear-gradient(
+                    to right bottom,
+                    $clr-secondary-100,
+                    $clr-secondary-900
+                ),
+                url(../img/nat-5.jpg);
+        }
+        &--2 {
+            background-image: linear-gradient(
+                    to right bottom,
+                    $clr-primary-100,
+                    $clr-primary-900
+                ),
+                url(../img/nat-6.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(
+                    to right bottom,
+                    $clr-tertiary-100,
+                    $clr-tertiary-900
+                ),
+                url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: calc(28 / 16 * 1rem);
+        font-weight: $fw-light-300;
+        text-transform: uppercase;
+        color: $clr-neutral-100;
+        text-align: right;
+        position: absolute;
+        top: calc(120 / 16 * 1rem);
+        right: calc(20 / 16 * 1rem);
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 0.5rem 1rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right,
+                $clr-secondary-100,
+                $clr-secondary-900
+            );
+        }
+        &--2 {
+            background-image: linear-gradient(
+                to right,
+                $clr-primary-100,
+                $clr-primary-900
+            );
+        }
+        &--3 {
+            background-image: linear-gradient(
+                to right,
+                $clr-tertiary-100,
+                $clr-tertiary-900
+            );
+        }
+    }
+
+    &__details {
+        padding: 1rem;
+        ul {
+            padding: 0;
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+        }
+        li {
+            text-align: center;
+            font-size: 1rem;
+            padding: 0.5rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $clr-neutral-300;
+            }
+        }
+    }
+
+    // Back side Styling
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $clr-neutral-100;
+        margin-bottom: 6rem;
+    }
+    &__price-only {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 4rem;
+        font-weight: $fw-light-300;
+    }
+}

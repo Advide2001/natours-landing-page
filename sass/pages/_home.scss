@@ -5,6 +5,7 @@
 }
 
 .section-features {
+    padding: 10rem 0;
     /* Overlay color on the background image */
     background-image: linear-gradient(
             to right bottom,
@@ -19,4 +20,9 @@
     & > * {
         transform: skewY(7deg);
     }
+}
+
+.section-tours {
+    background-color: $clr-neutral-200;
+    padding: 15.625rem 0 31.25rem 0;
 }
