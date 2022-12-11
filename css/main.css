@@ -174,7 +174,10 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 15.625rem 0 31.25rem 0; }
+  padding: 15.625rem 0 10rem 0; }
+
+.section-stories {
+  background-color: #f7f7f7; }
 
 /* Styling buttons */
 /* :link, :visited are pseudo classes */
@@ -355,6 +358,49 @@ body {
   .card__price-value {
     font-size: 4rem;
     font-weight: 300; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.75rem 3.75rem gray;
+  background-color: white;
+  padding: 3.75rem;
+  padding-left: 5.5rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 9.75rem;
+    height: 9.75rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-1.875rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    filter: blur(3px) brightness(90%); }
 
 .header {
   height: 95vh;
