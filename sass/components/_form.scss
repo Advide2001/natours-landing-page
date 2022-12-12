@@ -52,10 +52,6 @@
         display: inline-block;
     }
 
-    &radio-input {
-        display: none;
-    }
-
     &__radio-label {
         font-size: 1rem;
         cursor: pointer;
@@ -89,6 +85,9 @@
         }
     }
 
+    &__radio-input {
+        display: none;
+    }
     &__radio-input:checked + &__radio-label &__radio-button::after {
         opacity: 1;
     }

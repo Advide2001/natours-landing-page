@@ -14,7 +14,9 @@
         transition: all 0.2;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         transform: translateY(-3px);
         box-shadow: 0 0.75rem 1.25rem hsla(0, 0, 0, 0.2);
     }
@@ -27,6 +29,15 @@
     &-white {
         background-color: $clr-neutral-100;
         color: $clr-neutral-300;
+    }
+
+    &-green {
+        background-color: $clr-primary-500;
+        padding: 1rem 2.5rem;
+        color: $clr-neutral-100;
+        border-radius: 10rem;
+        border: none;
+        box-shadow: 0 0.5rem 1.25rem hsla(0, 0, 0, 0.2);
     }
 }
 
