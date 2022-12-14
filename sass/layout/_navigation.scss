@@ -23,17 +23,20 @@
         right: 4rem;
         background-image: radial-gradient($clr-primary-100, $clr-primary-900);
         z-index: 200;
+        transition: transform 0.8s;
 
-        transform: scale(60);
+        // transform: scale(60);
     }
 
     &__nav {
         height: 100vh;
-        width: 100%;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 202;
+        opacity: 0;
+        width: 0;
+        transition: opacity 0.8s;
     }
 
     &__list {
@@ -73,7 +76,15 @@
         &:active {
             background-position: 100%;
             color: $clr-primary-900;
-            transform: translateX(1rem);
+            transform: translateX(0.5rem);
         }
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(60);
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
     }
 }
